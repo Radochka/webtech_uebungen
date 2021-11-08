@@ -1,0 +1,29 @@
+.head{
+    background-color: #76B900;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+.wrapper {
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5%;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+}
+.stadt{
+    text-align: center;
+    border: 1px solid grey;
+    padding: 5px;
+    box-shadow: 5px 5px 2px lightgray;
+}
+.citylogo img{
+    padding-top: 10px;
+    text-align: center;
+    width: auto;
+    height: 100px;
+}
+.cityname{
+    text-align: center;
+}
