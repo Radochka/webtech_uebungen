@@ -1,0 +1,22 @@
+* {
+  --htw-gruen: #76B900;
+  --htw-grau:#AFAFAF;
+  --htw-orange:#FF5F00;
+  --htw-blau:#0082D1;
+  --htw-font:Verdana, Geneva, sans-serif;
+}
+body{
+  font-family: var(--htw-font);
+}
+h3:first-letter{
+  font-size: 150%;
+}
+div{
+  background-color: var(--htw-grau);
+  text-align: center;
+  color: var(--htw-orange);
+}
+img {
+  width:53px;
+  height:48px;
+}

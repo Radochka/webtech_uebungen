@@ -1,0 +1,32 @@
+* {
+  --htw-gruen: #76B900;
+  --htw-grau:#AFAFAF;
+  --htw-orange:#FF5F00;
+  --htw-blau:#0082D1;
+  --htw-font:Verdana, Geneva, sans-serif;
+}
+div{
+  background-color: var(--htw-grau);
+  text-align: center;
+  color: var(--htw-orange);
+}
+nav{
+  padding: 2%;
+}
+nav a{
+  background-color: var(--htw-blau);
+  border: 1px solid var(--htw-grau);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  box-shadow: 7px 5px 7px grey;
+}
+nav a:hover{
+  background-color: var(--htw-grau);
+  color: var(--htw-orange);
+}
+
