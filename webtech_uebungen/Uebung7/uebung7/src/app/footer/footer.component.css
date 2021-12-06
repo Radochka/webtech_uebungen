@@ -1,0 +1,15 @@
+* {
+  --htw-gruen: #76B900;
+  --htw-grau:#AFAFAF;
+  --htw-orange:#FF5F00;
+  --htw-blau:#0082D1;
+  --htw-font:Verdana, Geneva, sans-serif;
+}
+.footer{
+  background-color: var(--htw-orange);
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 80%;
+}

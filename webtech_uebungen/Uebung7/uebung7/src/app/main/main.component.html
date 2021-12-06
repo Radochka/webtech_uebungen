@@ -1,0 +1,28 @@
+<div class="centred">
+  <button (click)="tableOff()" class="btn-gruen btn btn-primary btn-lg btn-block" type="button">
+    {{buttonText}}
+  </button>
+</div>
+
+<section>
+<div *ngIf="!tableOn" class="gruen">Tabelle nicht vorhanden</div>
+<hr>
+  <table *ngIf="tableOn" class="table table-striped">
+    <thead>
+    <tr >
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>E-Mail-Adresse</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of members; let i = index">
+      <td>{{s.forename}}</td>
+      <td>{{s.surname}}</td>
+      <td>{{s.email}}</td>
+    </tr>
+
+
+  </tbody>
+</table>
+</section>
