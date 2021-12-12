@@ -1,5 +1,9 @@
 .idea
 VL
+bootstrap
 webtech_uebungen/css
 webtech_uebungen/bootstrap-5.1.3-dist
 webtech_uebungen/uebung6_Angular/package-
+node_modules
+package
+package-lock.json
