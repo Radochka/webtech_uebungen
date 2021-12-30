@@ -26,6 +26,6 @@ export class BackendService {
     return this.http.delete<any>(this.baseUrl + '/' + id, {observe: 'response'})
   }
   create(data: any): Observable<any> {
-    return this.http.post(this.baseUrl, data);
+    return this.http.post<any>(this.baseUrl, data);
   }
 }

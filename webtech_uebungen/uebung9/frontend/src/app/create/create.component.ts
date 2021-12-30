@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import {FormGroup} from "@angular/forms";
-/*import {Member} from "../shared/member";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {BackendService} from "../shared/backend.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {BackendService} from "../shared/backend.service";*/
+import {Member} from "../shared/member";
 
 @Component({
   selector: 'app-create',
@@ -13,20 +12,39 @@ import {BackendService} from "../shared/backend.service";*/
 })
 export class CreateComponent implements OnInit {
 
-  form!: FormGroup
-  constructor( private location: Location) {  }
+  member: Member
+  form: FormGroup
+  constructor(private bs: BackendService,
+              private fb: FormBuilder,
+              private route:ActivatedRoute,
+              private location: Location,
+              private router: Router
+  ) {
+    this.form = this.fb.group(
+      {
+        forenameControl: ['', Validators.required],
+        surnameControl: ['', Validators.required],
+        emailControl: ['', Validators.required]
+      }
+    )
+    this.member = {_id: '', forename: '', surname: '', email: ''}
+  }
 
   ngOnInit(): void {
   }
 
   create(): void {
-    console.log('created!')
+
+    const values = this.form.value
+    this.member.forename = values.forenameControl
+    this.member.surname = values.surnameControl
+    this.member.email = values.emailControl
+
+    this.bs.create(this.member).subscribe(
+        response => console.log(response),
+        error => console.log(error))
+    this.router.navigateByUrl('/table');
   }
-
-  addNewMember(): void{
-
-  }
-
   cancel(): void {
     this.location.back();
   }
